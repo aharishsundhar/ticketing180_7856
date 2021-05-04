@@ -4,6 +4,7 @@
         <label id="template-iuoa" class="label">Name</label>
         <input id="template-iu1zh" [(ngModel)]="tickets1.name" [ngModelOptions]="{standalone: true}"
         class="input form-control" />
+        <button id="template-iph5w" (click)="GpCreate()" class="button btn btn-primary">Send</button>
     </div>
     <div id="template-ihjx" class="cell">
         <label id="template-ibxgp" class="label">Description</label>
@@ -15,27 +16,4 @@
         <input id="template-irbvh" [(ngModel)]="tickets1.groups"
         [ngModelOptions]="{standalone: true}" class="input form-control" />
     </div>
-</div>
-<div id="template-ifi5" class="row">
-    <div id="template-ic4u" class="cell">
-        <label id="template-i2qmk" class="label">Types</label>
-        <div id="template-icvvh" class="">
-            <ng-select id="template-ir38k" name="dynamicdropdown_template-ir38k" [searchable]="true"
-            [virtualScroll]="true" [items]="types1itemArray" bindLabel="name" bindValue="name"
-            [(ngModel)]="tickets1.types" [ngModelOptions]="{standalone: true}" (click)="types1GpGetAllValues()"
-            class="form-control"></ng-select>
-        </div>
-        <button id="template-iph5w" (click)="GpCreate()" class="button btn btn-primary">Send</button>
-    </div>
-    <div id="template-isw8" class="cell">
-        <label id="template-ipqve" class="label">Severity</label>
-        <div id="template-iql1f" class=""></div>
-        <div id="template-ibjr5" class="">
-            <ng-select id="template-ijwig" name="dynamicdropdown_template-ijwig" [searchable]="true"
-            [virtualScroll]="true" [items]="severity1itemArray" bindLabel="name" bindValue="name"
-            [(ngModel)]="tickets1.severity" [ngModelOptions]="{standalone: true}" (click)="severity1GpGetAllValues()"
-            class="form-control"></ng-select>
-        </div>
-    </div>
-    <div id="template-id57" class="cell"></div>
 </div>

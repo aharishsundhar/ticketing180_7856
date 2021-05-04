@@ -16,10 +16,4 @@ export class Addticket1Service {
     GpCreate(tickets1): Observable<any> {
         return this.http.post(this.sharedService.DESKTOP_API + '/tickets1', tickets1);
     }
-    types1GpGetAllValues(): Observable<any> {
-        return this.http.get(this.sharedService.DESKTOP_API + '/types1');
-    }
-    severity1GpGetAllValues(): Observable<any> {
-        return this.http.get(this.sharedService.DESKTOP_API + '/severity1');
-    }
 }

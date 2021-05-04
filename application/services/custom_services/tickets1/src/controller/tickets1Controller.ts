@@ -14,13 +14,6 @@ tickets1.GpCreate(req, (response) => {
      res.json(response);
                 new CustomLogger().showLogger('info', 'Exit from tickets1Controller.ts: GpCreate');
     })}
-public GpGetAllValues(req: Request, res: Response) {
-tickets1.GpGetAllValues(req, (response) => {
-                new CustomLogger().showLogger('info', 'Enter into tickets1Controller.ts: GpGetAllValues');
-     res.status(200);
-     res.json(response);
-                new CustomLogger().showLogger('info', 'Exit from tickets1Controller.ts: GpGetAllValues');
-    })}
 
 
 }

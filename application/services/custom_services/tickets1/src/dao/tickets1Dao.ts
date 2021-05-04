@@ -16,15 +16,6 @@ callback(result);
 }).catch((error)=>{
 callback(error);
 });}
-public GpGetAllValues(callback){
-new CustomLogger().showLogger('info', 'Enter into tickets1Dao.ts: GpGetAllValues')
-
-this.tickets1.find().then((result)	=>	{
-new CustomLogger().showLogger('info', 'Exit from tickets1Dao.ts: GpGetAllValues');
-callback(result);
-}).catch((error)=>{
-callback(error);
-});}
 
 
 }
