@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: {{ .Values.app.prefix }}-app
+  name: {{ .Values.app.prefix }}-app
+  namespace: {{ .Values.app.namespace }}
+spec:
+  type: NodePort
+  ports:
+  - name: {{ .Values.service.authproxy.name }}
+    port: {{ .Values.service.authproxy.port }}
+    targetPort: {{ .Values.service.authproxy.targetPort }}
+  - name: {{ .Values.service.camunda.name }}
+    port: {{ .Values.service.camunda.port }}
+    targetPort: {{ .Values.service.camunda.targetPort }}
+  - name: {{ .Values.service.security.name }}
+    port: {{ .Values.service.security.port }}
+    targetPort: {{ .Values.service.security.targetPort }}
+  - name: {{ .Values.service.admin.name }}
+    port: {{ .Values.service.admin.port }}
+    targetPort: {{ .Values.service.admin.targetPort }}
+  - name: {{ .Values.service.types1.name }}
+    port: {{ .Values.service.types1.port }}
+    targetPort: {{ .Values.service.types1.targetPort }}
+
+  - name: {{ .Values.service.severity1.name }}
+    port: {{ .Values.service.severity1.port }}
+    targetPort: {{ .Values.service.severity1.targetPort }}
+
+  - name: {{ .Values.service.tickets1.name }}
+    port: {{ .Values.service.tickets1.port }}
+    targetPort: {{ .Values.service.tickets1.targetPort }}
+
+  selector:
+    name: {{ .Values.app.prefix }}-app
