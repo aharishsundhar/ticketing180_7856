@@ -15,14 +15,6 @@ export class tickets1Service {
          callback(response);
          });
     }
-public GpGetAllValues(req: Request, callback){
-    new CustomLogger().showLogger('info', 'Enter into tickets1Service.ts: GpGetAllValues')
-     
-     tickets1.GpGetAllValues((response)=>{
-             new CustomLogger().showLogger('info', 'Exit from tickets1Service.ts: GpGetAllValues')
-         callback(response);
-         });
-    }
 
 
 }

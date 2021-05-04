@@ -12,7 +12,6 @@ export class Routes {
             })
         })
         app.route('/tickets1').post(this.tickets1.GpCreate);
-app.route('/tickets1').get(this.tickets1.GpGetAllValues);
      }
 
 }

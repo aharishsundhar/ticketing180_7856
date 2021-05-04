@@ -13,7 +13,7 @@ info:
       name: Apache 2.0
       url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-   - url: http://localhost:8012
+   - url: http://localhost:8015
      description: tickets1
 tags:
 - name: tickets1
@@ -28,19 +28,6 @@ paths:
                application/json:
                   schema:
                      $ref: "#/components/schemas/tickets1"
-         responses:
-            200:
-               description: Success
-            400:
-               description: Bad Request
-            404:
-               description: Not Found
-            500:
-               description: Internal Server Error
-      get:
-         tags:
-         -  tickets1
-         description: GpGetAllValues
          responses:
             200:
                description: Success
